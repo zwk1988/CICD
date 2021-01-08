@@ -21,7 +21,7 @@ class TestSelenium():
     # 读入配置文件
     def get_config(self):
         config = configparser.ConfigParser()
-        config_path = "C:" + os.path.join(os.environ['HOMEPATH'], '../pytest_relearn/selenium.ini')
+        config_path = "C:" + os.path.join(os.environ['HOMEPATH'], 'selenium.ini')
         config.read(config_path)
         return config
 
