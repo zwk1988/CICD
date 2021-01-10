@@ -7,21 +7,13 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-
-# config = configparser.ConfigParser()
-# #print(os.path.join(os.path.expandvars('$HOMEPATH'), 'selenium.txt'))
-# #config.read('C:/selenium.txt')
-# p = "C:"+ os.path.join(os.environ['HOMEPATH'], 'selenium.txt')
-# print(p)
-# config.read(p)
-# print(config.get('driver', 'chrome_driver'))
-
 @allure.feature('Test Baidu Search')
 class TestSelenium():
     # 读入配置文件
     def get_config(self):
         config = configparser.ConfigParser()
         config_path = "C:" + os.path.join(os.environ['HOMEPATH'], 'selenium.ini')
+        print(config_path)
         config.read(config_path)
         return config
 
